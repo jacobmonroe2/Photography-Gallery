@@ -6,6 +6,7 @@
     <title>Jacob Monroe Photography</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
         body {
             margin: 0;
             padding: 0;
@@ -13,6 +14,7 @@
             background-color: #121212;
             color: #ffffff;
         }
+
         header {
             position: relative;
             height: 80vh;
@@ -22,6 +24,7 @@
             align-items: center;
             text-align: center;
         }
+
         .slideshow {
             position: absolute;
             top: 0;
@@ -30,6 +33,7 @@
             height: 100%;
             z-index: 0;
         }
+
         .slideshow img {
             position: absolute;
             top: 0;
@@ -41,21 +45,27 @@
             opacity: 0;
             animation: fade 25s infinite;
         }
+
         .slideshow img:nth-child(1) {
             animation-delay: 0s;
         }
+
         .slideshow img:nth-child(2) {
             animation-delay: 5s;
         }
+
         .slideshow img:nth-child(3) {
             animation-delay: 10s;
         }
+
         .slideshow img:nth-child(4) {
             animation-delay: 15s;
         }
+
         .slideshow img:nth-child(5) {
             animation-delay: 20s;
         }
+
         @keyframes fade {
             0% { opacity: 0; }
             10% { opacity: 1; }
@@ -63,6 +73,7 @@
             50% { opacity: 0; }
             100% { opacity: 0; }
         }
+
         header::before {
             content: '';
             position: absolute;
@@ -73,21 +84,25 @@
             background-color: rgba(0, 0, 0, 0.6);
             z-index: 1;
         }
+
         .header-content {
             z-index: 2;
             position: relative;
             text-align: center;
             padding: 20px;
         }
+
         .header-content img {
             width: 150px;
             height: auto;
             margin-bottom: 20px;
         }
+
         .header-content h2 {
             font-size: 2rem;
             margin: 0;
         }
+
         nav {
             position: fixed;
             top: 0;
@@ -100,14 +115,17 @@
             z-index: 1000;
             transition: background-color 0.5s ease;
         }
+
         nav:hover {
             background-color: rgba(0, 0, 0, 0.8);
         }
+
         .nav-links {
             display: flex;
             align-items: center;
             flex: 1;
         }
+
         .nav-links a {
             margin: 0 30px;
             color: #ffffff;
@@ -116,47 +134,57 @@
             font-size: 1rem;
             text-transform: uppercase;
         }
+
         .nav-links a:hover {
             color: #ffd700;
         }
+
         .social-icons {
             display: flex;
             align-items: center;
             gap: 15px;
             margin-right: 60px;
         }
+
         .social-icons img {
             width: 30px;
             height: auto;
             cursor: pointer;
             transition: transform 0.3s;
         }
+
         .social-icons img:hover {
             transform: scale(1.2);
         }
+
         main {
             padding: 50px 20px;
         }
+
         section {
             max-width: 1200px;
             margin: 50px auto;
             padding: 20px 0;
             text-align: center;
         }
+
         section h3 {
             font-size: 2rem;
             margin-bottom: 20px;
             color: #ffd700;
         }
+
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
+
         .gallery-item {
             position: relative;
             overflow: hidden;
         }
+
         .gallery img {
             width: 100%;
             height: auto;
@@ -164,10 +192,12 @@
             transition: opacity 0.3s ease-in-out, transform 0.3s;
             opacity: 1;
         }
+
         .gallery-item:hover img {
             opacity: 0.3;
             transform: scale(1.05);
         }
+
         .gallery .description {
             position: absolute;
             top: 50%;
@@ -180,23 +210,72 @@
             opacity: 0;
             transition: opacity 0.3s ease-in-out;
         }
+
         .gallery-item:hover .description {
             opacity: 1;
         }
+
+        .video-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 50px;
+        }
+
+        .video-item {
+            position: relative;
+            width: 450px; 
+            height: 300px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+
+        .video-item:hover .video {
+            opacity: 1;
+            animation: play-video 1s forwards;
+        }
+
+        .video-description {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            z-index: 2;
+        }
+
+        @keyframes play-video {
+            0% { opacity: 1; }
+            100% { opacity: 1; }
+        }
+
+
         footer {
             text-align: center;
             padding: 20px 10px;
             background-color: #000;
             color: #777;
         }
+
         footer p {
             margin: 0;
         }
+
         .fade-in {
             opacity: 0;
             transform: translateY(50px);
             transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
+
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
@@ -204,10 +283,12 @@
     </style>
 </head>
 <body>
+
 <nav>
     <div class="nav-links">
         <a href="san-francisco.html">San Francisco</a>
         <a href="washington-dc.html">Washington, D.C.</a>
+        <a href="events.html">Events</a>
     </div>
     <div class="social-icons">
         <a href="https://www.instagram.com/jacobbb_photos/" target="_blank">
@@ -221,19 +302,21 @@
         </a>
     </div>
 </nav>
+
 <header>
     <div class="slideshow">
         <img src="images/DSC06158-Enhanced-NR.jpg" alt="Golden Gate Bridge">
         <img src="images/DSC03888.jpg" alt="Kauai">
         <img src="images/C0229T01.jpg" alt="Howard Darty">
         <img src="images/DSC07510-Enhanced-NR.jpg" alt="City Skyline">
-        <img src="images/DSC00280-Edit.jpg" alt="Sunset Beach">
+        <img src="images/DSC02680-Edit.jpg" alt="Sunset Beach">
     </div>
     <div class="header-content fade-in">
         <img src="images/jmp-logo.png" alt="JMP Logo">
-        <h2>Jacob Monroe Photography</h2>
+        <h2>Jacob Monroe</h2>
     </div>
 </header>
+
 <main>
     <section>
         <h3 class="fade-in">Featured Photos</h3>
@@ -258,10 +341,35 @@
             </div>
         </div>
     </section>
+    <section class="videos">
+        <h3 class="fade-in">My Videos</h3>
+        <div class="video-gallery">
+            <div class="video-item">
+                <video class="video">
+                    <source src="images/C0221_13.mp4" type="video/mp4">
+                </video>
+                <div class="video-description">sophomore.mp4</div>
+            </div>
+            <div class="video-item">
+                <video class="video">
+                    <source src="images/C0268_5.mp4" type="video/mp4">
+                </video>
+                <div class="video-description">A day in SF</div>
+            </div>
+            <div class="video-item">
+                <video class="video">
+                    <source src="images/C0257_2.mp4" type="video/mp4">
+                </video>
+                <div class="video-description">Project Home</div>
+            </div>
+        </div>
+    </section>
 </main>
+
 <footer>
     <p>&copy; 2025 Jacob Monroe Photography</p>
 </footer>
+
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const nav = document.querySelector('nav');
@@ -272,6 +380,7 @@
         nav.addEventListener('mouseleave', function () {
             nav.style.backgroundColor = 'rgba(0, 0, 0, 0)';
         });
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -285,7 +394,22 @@
         });
         const fadeElements = document.querySelectorAll('.fade-in');
         fadeElements.forEach(el => observer.observe(el));
+
+        const videos = document.querySelectorAll('.video');
+        videos.forEach(video => {
+            video.addEventListener('mouseover', function () {
+                video.muted = false; 
+                video.play();        
+            });
+            video.addEventListener('mouseleave', function () {
+                video.pause();       
+                video.currentTime = 0; 
+                video.muted = true;  
+            });
+        });
     });
 </script>
+
+
 </body>
 </html>
