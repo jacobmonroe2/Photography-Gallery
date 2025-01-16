@@ -6,7 +6,6 @@
     <title>Jacob Monroe Photography</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
-
         body {
             margin: 0;
             padding: 0;
@@ -14,7 +13,6 @@
             background-color: #121212;
             color: #ffffff;
         }
-
         header {
             position: relative;
             height: 80vh;
@@ -24,7 +22,6 @@
             align-items: center;
             text-align: center;
         }
-
         .slideshow {
             position: absolute;
             top: 0;
@@ -33,7 +30,6 @@
             height: 100%;
             z-index: 0;
         }
-
         .slideshow img {
             position: absolute;
             top: 0;
@@ -43,48 +39,30 @@
             object-fit: cover;
             object-position: center;
             opacity: 0;
-            animation: fade 25s infinite; /* Total animation duration */
+            animation: fade 25s infinite;
         }
-
         .slideshow img:nth-child(1) {
             animation-delay: 0s;
         }
-
         .slideshow img:nth-child(2) {
             animation-delay: 5s;
         }
-
         .slideshow img:nth-child(3) {
             animation-delay: 10s;
         }
-
         .slideshow img:nth-child(4) {
             animation-delay: 15s;
         }
-
         .slideshow img:nth-child(5) {
             animation-delay: 20s;
         }
-
         @keyframes fade {
-            0% {
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            40% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 0;
-            }
+            0% { opacity: 0; }
+            10% { opacity: 1; }
+            40% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 0; }
         }
-
-
         header::before {
             content: '';
             position: absolute;
@@ -95,107 +73,90 @@
             background-color: rgba(0, 0, 0, 0.6);
             z-index: 1;
         }
-
         .header-content {
             z-index: 2;
             position: relative;
             text-align: center;
             padding: 20px;
         }
-
         .header-content img {
             width: 150px;
             height: auto;
             margin-bottom: 20px;
         }
-
         .header-content h2 {
             font-size: 2rem;
             margin: 0;
         }
-
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            background-color: rgba(0, 0, 0, 0); /* Default: Transparent background */
+            background-color: rgba(0, 0, 0, 0);
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 10px 20px;
             z-index: 1000;
-            transition: background-color 0.5s ease; /* Smooth fade effect */
+            transition: background-color 0.5s ease;
         }
-
         nav:hover {
-            background-color: rgba(0, 0, 0, 0.8); /* Black background fades in on hover */
+            background-color: rgba(0, 0, 0, 0.8);
         }
-
         .nav-links {
             display: flex;
             align-items: center;
             flex: 1;
         }
-
         .nav-links a {
-            margin: 0 30px; /* Wider spacing between links */
+            margin: 0 30px;
             color: #ffffff;
             text-decoration: none;
             font-weight: 600;
             font-size: 1rem;
             text-transform: uppercase;
         }
-
         .nav-links a:hover {
             color: #ffd700;
         }
-
         .social-icons {
             display: flex;
             align-items: center;
             gap: 15px;
             margin-right: 60px;
         }
-
         .social-icons img {
             width: 30px;
             height: auto;
             cursor: pointer;
             transition: transform 0.3s;
         }
-
         .social-icons img:hover {
             transform: scale(1.2);
         }
-
         main {
             padding: 50px 20px;
         }
-
         section {
             max-width: 1200px;
-            margin: 50px auto; /* Add spacing between sections */
-            padding: 20px 0; /* Add padding inside each section */
+            margin: 50px auto;
+            padding: 20px 0;
             text-align: center;
         }
-
         section h3 {
             font-size: 2rem;
             margin-bottom: 20px;
             color: #ffd700;
         }
-
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px; /* Increase spacing between images */
+            gap: 30px;
         }
-
         .gallery-item {
             position: relative;
             overflow: hidden;
         }
-
         .gallery img {
             width: 100%;
             height: auto;
@@ -203,12 +164,10 @@
             transition: opacity 0.3s ease-in-out, transform 0.3s;
             opacity: 1;
         }
-
         .gallery-item:hover img {
             opacity: 0.3;
             transform: scale(1.05);
         }
-
         .gallery .description {
             position: absolute;
             top: 50%;
@@ -221,28 +180,23 @@
             opacity: 0;
             transition: opacity 0.3s ease-in-out;
         }
-
         .gallery-item:hover .description {
             opacity: 1;
         }
-
         footer {
             text-align: center;
             padding: 20px 10px;
             background-color: #000;
             color: #777;
         }
-
         footer p {
             margin: 0;
         }
-
         .fade-in {
             opacity: 0;
             transform: translateY(50px);
             transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
-
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
@@ -250,7 +204,6 @@
     </style>
 </head>
 <body>
-
 <nav>
     <div class="nav-links">
         <a href="san-francisco.html">San Francisco</a>
@@ -268,7 +221,6 @@
         </a>
     </div>
 </nav>
-
 <header>
     <div class="slideshow">
         <img src="images/DSC06158-Enhanced-NR.jpg" alt="Golden Gate Bridge">
@@ -282,7 +234,6 @@
         <h2>Jacob Monroe Photography</h2>
     </div>
 </header>
-
 <main>
     <section>
         <h3 class="fade-in">Featured Photos</h3>
@@ -308,26 +259,19 @@
         </div>
     </section>
 </main>
-
 <footer>
     <p>&copy; 2025 Jacob Monroe Photography</p>
 </footer>
-
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const nav = document.querySelector('nav');
-
-        // Ensure the black bar fades in/out while the text/icons stay fixed
         nav.style.backgroundColor = 'rgba(0, 0, 0, 0)';
-
         nav.addEventListener('mouseenter', function () {
             nav.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
         });
-
         nav.addEventListener('mouseleave', function () {
             nav.style.backgroundColor = 'rgba(0, 0, 0, 0)';
         });
-
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -339,11 +283,9 @@
         }, {
             threshold: 0.2
         });
-
         const fadeElements = document.querySelectorAll('.fade-in');
         fadeElements.forEach(el => observer.observe(el));
     });
 </script>
-
 </body>
 </html>
